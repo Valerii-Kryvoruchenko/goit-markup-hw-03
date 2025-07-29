@@ -5,13 +5,49 @@ body {
   background-color: #fff;
 }
 
+/* reset */
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* common */
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* header */
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -24,6 +60,11 @@ a {
   color: #4d5ae5;
 }
 
+.header-logo {
+  padding: 24px 0;
+  margin-right: 76px;
+}
+
 .header-logo .logo-part {
   color: #2e2f42;
 }
@@ -32,7 +73,15 @@ a {
   color: #f4f4fd;
 }
 
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .nav-link {
+  display: block;
+  padding: 24px 0;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -41,12 +90,21 @@ a {
 
 .contacts {
   font-style: normal;
+  margin-left: auto;
 }
 
 .contacts-link {
+  display: block;
+  padding: 24px 0;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+}
+
+.contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .nav-link:hover,
@@ -56,6 +114,11 @@ a {
   color: #404bbf;
 }
 
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+/* hero */
 .hero,
 .page-footer {
   background-color: #2e2f42;
@@ -67,20 +130,47 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  padding-bottom: 48px;
+  max-width: 496px;
+  margin: auto;
 }
 
 .hero-button {
+  display: block;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
   background-color: #4d5ae5;
   cursor: pointer;
+  border-radius: 4px;
+  width: 169px;
+  height: 56px;
+  margin: 0 auto;
 }
 
 .hero-button:hover,
 .hero-button:focus {
   background-color: #404bbf;
+}
+
+.hero-container {
+  padding-top: 188px;
+  padding-bottom: 188px;
+}
+
+/* benefits */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .benefits-subtitle {
@@ -89,6 +179,11 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
+}
+.benefits-list {
+  display: flex;
+  gap: 24px;
 }
 
 .benefits-description {
@@ -96,6 +191,11 @@ a {
   letter-spacing: 0.02em;
 }
 
+.benefits-list-item {
+  max-width: calc((100% - 72px) / 4);
+}
+
+/* our team */
 .our-team {
   background-color: #f4f4fd;
 }
@@ -109,10 +209,23 @@ a {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  padding-bottom: 72px;
+}
+
+.our-team-list {
+  display: flex;
+  gap: 24px;
+}
+
+.team-text-wrap {
+  display: block;
+  text-align: center;
+  padding: 32px 16px;
 }
 
 .team-list-item {
   background-color: #fff;
+  border-radius: 0 0 4px 4px;
 }
 
 .team-names {
@@ -122,27 +235,64 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-}
-
-.portfolio-subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-}
-
-.footer-text {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #f4f4fd;
+  margin-bottom: 8px;
 }
 
 .team-profession {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
+/* our portfolio */
+.portfolio-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  padding-bottom: 8px;
+}
+
+.portfolio-items {
+  /* border: 1px solid #e7e9fc; */
+  max-width: calc((100% - 48px) / 3);
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
+.portfolio-text-wrap {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+}
+
 .portfolio-text {
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+/* footer */
+.footer-text {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  max-width: 264px;
+}
+
+.page-footer {
+  padding: 100px 0;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
 }
